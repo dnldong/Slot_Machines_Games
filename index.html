@@ -4,15 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Xuân Bính Ngọ 2026 - Lucky Spin</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧧</text></svg>">
     
-    <!-- Import Map để dùng Vue trực tiếp từ CDN -->
-    <script type="importmap">
-    {
-      "imports": {
-        "vue": "https://unpkg.com/vue@3/dist/vue.esm-browser.js"
-      }
-    }
-    </script>
+    <!-- Load Vue Global (Important for avoiding module errors) -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script type="text/javascript">
       tailwind.config = {
@@ -26,13 +23,16 @@
         }
       }
     </script>
+    
+    <!-- Styles -->
     <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="/index.css">
 </head>
 <body class="bg-[#800000] text-white">
     <div id="app"></div>
-    <!-- Load file script.js dạng module -->
-    <script type="module" src="script.js"></script>
+    
+    <!-- Logic Script (No type="module" needed) -->
+    <script src="script.js"></script>
 <script type="module" src="/index.tsx"></script>
 </body>
 </html>
